@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="温豆隐私政策 - TempBean Privacy Policy">
+    <meta name="keywords" content="温豆,温度记录仪,隐私政策,TempBean,privacy policy">
+    <title>隐私政策 - 温豆 | Privacy Policy - TempBean</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 语言切换 */
+        .lang-switch {
+            text-align: right;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            background: #f5f7fa;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-left: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        /* 主卡片 */
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* 标题 */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header .meta {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .header .meta span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        /* 提示框 */
+        .notice {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .notice.warning {
+            background: #fff8e6;
+            border-left: 4px solid #ffa500;
+        }
+
+        .notice.info {
+            background: #e8f4fd;
+            border-left: 4px solid #2196F3;
+        }
+
+        .notice.success {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .notice-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notice.warning .notice-title { color: #e67e00; }
+        .notice.info .notice-title { color: #1976D2; }
+        .notice.success .notice-title { color: #388E3C; }
+
+        /* 章节 */
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .section ul, .section ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        /* 表格 */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background: #4CAF50;
+            color: white;
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .required {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .optional {
+            color: #888;
+        }
+
+        /* 联系信息 */
+        .contact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .contact-item .icon {
+            width: 24px;
+            margin-right: 12px;
+            text-align: center;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            .lang-switch {
+                text-align: center;
+            }
+
+            .lang-btn {
+                padding: 6px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* 语言显示控制 */
+        .lang-zh, .lang-en {
+            display: none;
+        }
+
+        body.show-zh .lang-zh {
+            display: block;
+        }
+
+        body.show-en .lang-en {
+            display: block;
+        }
+
+        body.show-zh .lang-btn-zh,
+        body.show-en .lang-btn-en {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body class="show-zh">
+
+<div class="container">
+    <!-- 语言切换 -->
+    <div class="lang-switch">
+        <span class="lang-btn lang-btn-zh" onclick="switchLang('zh')">中文</span>
+        <span class="lang-btn lang-btn-en" onclick="switchLang('en')">English</span>
+    </div>
+
+    <!-- ==================== 中文版本 ==================== -->
+    <div class="lang-zh">
+        <div class="card">
+            <div class="header">
+                <div class="logo">🌡️</div>
+                <h1>温豆隐私政策</h1>
+                <div class="meta">
+                    <span>版本：1.0</span>
+                    <span>|</span>
+                    <span>更新日期：2025年12月15日</span>
+                    <span>|</span>
+                    <span>生效日期：2025年12月15日</span>
+                </div>
+            </div>
+
+            <!-- 特别提示 -->
+            <div class="notice warning">
+                <div class="notice-title">⚠️ 特别提示</div>
+                <p>在使用本应用前，请您务必仔细阅读并充分理解本隐私政策。如您不同意本政策内容，请停止使用本应用。当您点击"同意"或继续使用本应用时，即表示您已阅读并同意本隐私政策的全部内容。</p>
+            </div>
+
+            <!-- 第一章 -->
+            <div class="section">
+                <h2>一、引言</h2>
+                <p>环科泰电子科技有限公司（以下简称"我们"）非常重视您的个人信息保护。本隐私政策适用于温豆应用程序（以下简称"本应用"）。</p>
+                <p>我们将依据《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》《中华人民共和国数据安全法》及相关法律法规和技术规范，采取相应的安全保护措施，保护您的个人信息安全可靠。</p>
+                <p>请您在使用本应用前，仔细阅读并充分理解本政策。如对本政策有任何疑问，请通过本政策末尾的联系方式与我们联系。</p>
+            </div>
+
+            <!-- 第二章 -->
+            <div class="section">
+                <h2>二、我们如何收集和使用个人信息</h2>
+                <p>我们会遵循正当、合法、必要的原则，仅收集实现产品功能所必要的信息。以下是我们收集的个人信息类型及用途：</p>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 20%">信息类型</th>
+                                <th style="width: 35%">具体内容</th>
+                                <th style="width: 45%">使用目的</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>设备信息</strong></td>
+                                <td>蓝牙设备名称、MAC地址、型号、硬件版本、软件版本</td>
+                                <td>识别和连接您的温度记录仪设备，确保兼容性</td>
+                            </tr>
+                            <tr>
+                                <td><strong>温度数据</strong></td>
+                                <td>实时温度读数、历史温度记录、时间戳、报警事件记录</td>
+                                <td>提供温度监测、数据分析和报警功能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>配置信息</strong></td>
+                                <td>记录间隔、温度阈值、广播设置、采样配置</td>
+                                <td>配置设备参数，满足个性化需求</td>
+                            </tr>
+                            <tr>
+                                <td><strong>位置信息</strong><br><span class="optional">（可选）</span></td>
+                                <td>GPS经纬度、地址信息</td>
+                                <td>仅在您主动点击"获取当前位置"时收集，用于标记数据下载位置</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 第三章 -->
+            <div class="section">
+                <h2>三、设备权限说明</h2>
+                <p>为实现本应用的各项功能，我们需要申请以下设备权限：</p>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 25%">权限名称</th>
+                                <th style="width: 15%">是否必须</th>
+                                <th style="width: 60%">使用目的和场景</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>蓝牙权限</strong><br>(BLUETOOTH)</td>
+                                <td><span class="required">是</span></td>
+                                <td>用于扫描、连接和通信温度记录仪设备。在您打开应用扫描设备时使用。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>位置权限</strong><br>(LOCATION)</td>
+                                <td><span class="required">是</span></td>
+                                <td>Android系统要求：扫描蓝牙设备需要此权限。在您扫描蓝牙设备时使用，我们不会收集您的实际位置信息。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>精确位置</strong><br>(FINE_LOCATION)</td>
+                                <td><span class="optional">否</span></td>
+                                <td>仅在您主动点击"获取当前位置"按钮时使用，用于标记数据下载位置。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>存储权限</strong><br>(STORAGE)</td>
+                                <td><span class="required">是</span></td>
+                                <td>用于保存温度历史数据到本地数据库。在下载设备数据时使用。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>权限使用说明：</strong></p>
+                <ul>
+                    <li>上述权限均不会默认开启，仅在您主动触发相关功能时才会向您申请</li>
+                    <li>您可以在设备的"设置-应用-权限管理"中随时关闭上述权限</li>
+                    <li>关闭权限后，相关功能将无法使用，但不会影响其他功能的正常使用</li>
+                    <li><strong>本应用不会在后台自启动或关联启动其他应用</strong></li>
+                </ul>
+            </div>
+
+            <!-- 第四章 -->
+            <div class="section">
+                <h2>四、我们如何存储个人信息</h2>
+                <p><strong>4.1 存储地点</strong></p>
+                <p>您的个人信息将存储于中华人民共和国境内您的设备本地。我们不会将您的个人信息传输至境外。所有数据均存储在您设备的本地SQLite数据库中，不会上传至任何服务器。</p>
+                
+                <p><strong>4.2 存储期限</strong></p>
+                <ul>
+                    <li>温度历史数据：将一直保存在您的设备上，直到您手动删除或卸载应用</li>
+                    <li>设备配置信息：应用运行期间保存，卸载后自动清除</li>
+                    <li>位置信息：仅在您主动获取时临时使用，不做持久化存储</li>
+                </ul>
+
+                <p><strong>4.3 数据删除</strong></p>
+                <p>您可以通过以下方式删除您的数据：</p>
+                <ul>
+                    <li>在"历史数据"页面删除单条或多条记录</li>
+                    <li>卸载本应用将清除所有本地数据</li>
+                </ul>
+            </div>
+
+            <!-- 第五章 -->
+            <div class="section">
+                <h2>五、我们如何保护个人信息安全</h2>
+                <p><strong>5.1 技术措施</strong></p>
+                <ul>
+                    <li>使用本地加密存储保护敏感配置</li>
+                    <li>蓝牙通信遵循BLE安全协议</li>
+                    <li>应用代码经过混淆处理</li>
+                </ul>
+
+                <p><strong>5.2 管理措施</strong></p>
+                <ul>
+                    <li>严格限制信息访问人员</li>
+                    <li>定期进行安全评估和更新</li>
+                </ul>
+
+                <p><strong>5.3 安全事件处理</strong></p>
+                <p>如发生个人信息安全事件，我们将按照法律法规的要求，及时向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议等。</p>
+            </div>
+
+            <!-- 第六章 -->
+            <div class="section">
+                <h2>六、第三方SDK及服务说明</h2>
+                <p>本应用为纯离线工具应用，<strong>不集成任何第三方SDK</strong>，不包含：</p>
+                <ul>
+                    <li>数据统计SDK</li>
+                    <li>广告SDK</li>
+                    <li>推送SDK</li>
+                    <li>社交分享SDK</li>
+                    <li>支付SDK</li>
+                    <li>地图SDK</li>
+                </ul>
+                <p>本应用仅使用系统原生API实现功能，不会向任何第三方共享您的个人信息。</p>
+            </div>
+
+            <!-- 第七章 -->
+            <div class="section">
+                <h2>七、您的权利</h2>
+                <p>根据《个人信息保护法》等相关法律法规，您对您的个人信息享有以下权利：</p>
+                
+                <p><strong>7.1 查阅权</strong><br>您可以随时在应用内查看您的所有数据，包括温度历史记录、设备配置等。</p>
+                
+                <p><strong>7.2 复制权</strong><br>您可以通过"分享"功能导出您的数据副本（CSV格式）。</p>
+                
+                <p><strong>7.3 更正权</strong><br>您可以在"历史数据"页面修改记录名称等信息。</p>
+                
+                <p><strong>7.4 删除权</strong><br>您可以通过以下方式删除您的个人信息：</p>
+                <ul>
+                    <li>在"历史数据"页面选择并删除记录</li>
+                    <li>卸载本应用以删除所有数据</li>
+                </ul>
+                
+                <p><strong>7.5 撤回同意权</strong><br>您可以在设备设置中撤回对本应用的权限授权。撤回授权后，我们将无法继续提供相应功能，但不影响此前已进行的信息处理活动的效力。</p>
+                
+                <p><strong>7.6 注销账户</strong><br>本应用不需要注册账户，无需注销。如需清除所有数据，卸载应用即可。</p>
+            </div>
+
+            <!-- 第八章 -->
+            <div class="section">
+                <h2>八、未成年人保护</h2>
+                <p>我们非常重视对未成年人个人信息的保护。</p>
+                <p>如果您是未满14周岁的未成年人，在使用本应用前，应在您的父母或其他监护人监护、指导下共同阅读本隐私政策，并在征得您的父母或其他监护人同意后使用本应用。</p>
+                <p>如果您是未成年人的父母或其他监护人，请您关注您监护的未成年人是否是在取得您的授权同意之后使用本应用。</p>
+                <p>如果您对您所监护的未成年人的个人信息有疑问，请通过本政策末尾的联系方式与我们联系。</p>
+            </div>
+
+            <!-- 第九章 -->
+            <div class="section">
+                <h2>九、隐私政策的更新</h2>
+                <p>我们可能适时修订本隐私政策。当政策发生变更时，我们会在应用内以弹窗、公告等显著方式通知您。</p>
+                <p>对于重大变更，我们会在生效前通过应用内通知或其他方式告知您，并重新获取您的同意。重大变更包括但不限于：</p>
+                <ul>
+                    <li>个人信息处理目的、方式发生变化</li>
+                    <li>收集的个人信息类型发生变化</li>
+                    <li>个人信息的第三方共享情况发生变化</li>
+                    <li>您的权利及行使方式发生变化</li>
+                </ul>
+                <p>若您不同意修改后的隐私政策，您有权停止使用本应用。若您继续使用，即视为您同意受修改后的隐私政策约束。</p>
+            </div>
+
+            <!-- 第十章 -->
+            <div class="section">
+                <h2>十、争议解决</h2>
+                <p>如您对本隐私政策或个人信息保护相关事宜有任何疑问、意见或建议，或者希望行使您的个人信息权利，您可以通过以下方式与我们联系。我们将在15个工作日内回复您的请求。</p>
+                <p>如果您对我们的回复不满意，特别是您认为我们的个人信息处理行为损害了您的合法权益，您还可以向网信部门、电信管理机构、公安机关等有权机关投诉或举报，或通过向被告住所地有管辖权的法院提起诉讼来寻求解决方案。</p>
+            </div>
+
+            <!-- 第十一章 -->
+            <div class="section">
+                <h2>十一、联系我们</h2>
+                <div class="contact-card">
+                    <h3>📞 联系方式</h3>
+                    <div class="contact-item">
+                        <span class="icon">🏢</span>
+                        <span>公司名称：环科泰电子科技有限公司</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>联系电话：18153604323</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🌐</span>
+                        <span>官方网站：www.huanketai.cn</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <span>办公地址：甘肃省兰州市安宁区立达医药产业园1294附20号</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重要声明 -->
+            <div class="notice success">
+                <div class="notice-title">✅ 重要声明</div>
+                <ul style="margin-left: 20px;">
+                    <li>本应用是完全离线的工具应用，不需要联网即可使用核心功能</li>
+                    <li>所有数据仅存储在您的设备本地，不会上传到任何服务器</li>
+                    <li>我们不会收集、上传或分享您的任何个人信息</li>
+                    <li>本应用不包含任何第三方SDK</li>
+                    <li>本应用不会自启动或关联启动其他应用</li>
+                    <li>您的隐私和数据安全完全由您自己掌控</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>© 2025 环科泰电子科技有限公司 版权所有</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.huanketai.cn">www.huanketai.cn</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ==================== English Version ==================== -->
+    <div class="lang-en">
+        <div class="card">
+            <div class="header">
+                <div class="logo">🌡️</div>
+                <h1>TempBean Privacy Policy</h1>
+                <div class="meta">
+                    <span>Version: 1.0</span>
+                    <span>|</span>
+                    <span>Last Updated: Dec. 15, 2025</span>
+                    <span>|</span>
+                    <span>Effective Date: Dec. 15, 2025</span>
+                </div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="notice warning">
+                <div class="notice-title">⚠️ Important Notice</div>
+                <p>Please read this Privacy Policy carefully before using this Application. If you do not agree with this Policy, please stop using this Application. By clicking "Agree" or continuing to use this Application, you indicate that you have read and agreed to all contents of this Privacy Policy.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <h2>1. Introduction</h2>
+                <p>Huanketai Electronic Technology Co., Ltd. (hereinafter referred to as "we") attaches great importance to the protection of your personal information. This Privacy Policy applies to the TempBean application (hereinafter referred to as "this Application").</p>
+                <p>We will take appropriate security measures to protect the security and reliability of your personal information in accordance with applicable laws and regulations.</p>
+                <p>Please read and fully understand this Policy before using this Application. If you have any questions about this Policy, please contact us through the contact information at the end of this Policy.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2>2. How We Collect and Use Personal Information</h2>
+                <p>We will follow the principles of legitimacy, legality and necessity to collect only the information necessary to realize product functions. The following are the types of personal information we collect and their purposes:</p>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 20%">Information Type</th>
+                                <th style="width: 35%">Details</th>
+                                <th style="width: 45%">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Device Info</strong></td>
+                                <td>Bluetooth device name, MAC address, model, hardware version, software version</td>
+                                <td>Identify and connect to your temperature logger device</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temperature Data</strong></td>
+                                <td>Real-time temperature readings, historical records, timestamps, alarm event records</td>
+                                <td>Provide temperature monitoring, data analysis and alarm functions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Configuration</strong></td>
+                                <td>Recording interval, temperature threshold, broadcast settings, sampling configuration</td>
+                                <td>Configure device parameters to meet personalized needs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Location Info</strong><br><span class="optional">(Optional)</span></td>
+                                <td>GPS coordinates, address information</td>
+                                <td>Only collected when you actively click "Get Current Location" to mark download location</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2>3. Device Permission Description</h2>
+                <p>To implement the various functions of this Application, we need to apply for the following device permissions:</p>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 25%">Permission</th>
+                                <th style="width: 15%">Required</th>
+                                <th style="width: 60%">Purpose and Scenario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bluetooth</strong><br>(BLUETOOTH)</td>
+                                <td><span class="required">Yes</span></td>
+                                <td>Used to scan, connect and communicate with temperature logger devices.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Location</strong><br>(LOCATION)</td>
+                                <td><span class="required">Yes</span></td>
+                                <td>Required by Android system to scan Bluetooth devices. We do not collect your actual location.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fine Location</strong><br>(FINE_LOCATION)</td>
+                                <td><span class="optional">No</span></td>
+                                <td>Only used when you actively click "Get Current Location" button to mark download location.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Storage</strong><br>(STORAGE)</td>
+                                <td><span class="required">Yes</span></td>
+                                <td>Used to save temperature history data to local database.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>Permission Usage Notes:</strong></p>
+                <ul>
+                    <li>The above permissions will not be enabled by default and will only be requested when you actively trigger related functions</li>
+                    <li>You can disable these permissions at any time in your device's "Settings - Apps - Permission Management"</li>
+                    <li>Disabling permissions will prevent related functions from being used, but will not affect other functions</li>
+                    <li><strong>This Application will not auto-start or launch other applications in the background</strong></li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2>4. How We Store Personal Information</h2>
+                <p><strong>4.1 Storage Location</strong></p>
+                <p>Your personal information is stored locally on your device. We will not transfer your personal information overseas. All data is stored in the local SQLite database on your device and will not be uploaded to any server.</p>
+                
+                <p><strong>4.2 Storage Period</strong></p>
+                <ul>
+                    <li>Temperature history data: Will be kept on your device until you manually delete it or uninstall the app</li>
+                    <li>Device configuration: Saved during app operation, automatically cleared after uninstallation</li>
+                    <li>Location information: Only used temporarily when you actively obtain it, not stored persistently</li>
+                </ul>
+
+                <p><strong>4.3 Data Deletion</strong></p>
+                <p>You can delete your data through:</p>
+                <ul>
+                    <li>Delete single or multiple records on the "History Data" page</li>
+                    <li>Uninstall this Application to clear all local data</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2>5. How We Protect Personal Information Security</h2>
+                <p><strong>5.1 Technical Measures</strong></p>
+                <ul>
+                    <li>Use local encrypted storage to protect sensitive configurations</li>
+                    <li>Bluetooth communication follows BLE security protocol</li>
+                    <li>Application code is obfuscated</li>
+                </ul>
+
+                <p><strong>5.2 Management Measures</strong></p>
+                <ul>
+                    <li>Strictly limit information access personnel</li>
+                    <li>Regular security assessments and updates</li>
+                </ul>
+
+                <p><strong>5.3 Security Incident Handling</strong></p>
+                <p>In the event of a personal information security incident, we will promptly notify you as required by laws and regulations.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2>6. Third-Party SDK and Service Description</h2>
+                <p>This Application is a pure offline tool application and <strong>does not integrate any third-party SDK</strong>, including:</p>
+                <ul>
+                    <li>Analytics SDK</li>
+                    <li>Advertising SDK</li>
+                    <li>Push SDK</li>
+                    <li>Social Sharing SDK</li>
+                    <li>Payment SDK</li>
+                    <li>Map SDK</li>
+                </ul>
+                <p>This Application only uses system native APIs to implement functions and will not share your personal information with any third party.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2>7. Your Rights</h2>
+                <p>According to applicable laws and regulations, you have the following rights over your personal information:</p>
+                
+                <p><strong>7.1 Right of Access</strong><br>You can view all your data at any time within the app, including temperature history records, device configuration, etc.</p>
+                
+                <p><strong>7.2 Right of Portability</strong><br>You can export a copy of your data (CSV format) through the "Share" function.</p>
+                
+                <p><strong>7.3 Right of Rectification</strong><br>You can modify record names and other information on the "History Data" page.</p>
+                
+                <p><strong>7.4 Right of Deletion</strong><br>You can delete your personal information by:</p>
+                <ul>
+                    <li>Select and delete records on the "History Data" page</li>
+                    <li>Uninstall this Application to delete all data</li>
+                </ul>
+                
+                <p><strong>7.5 Right to Withdraw Consent</strong><br>You can withdraw authorization for this Application in device settings. After withdrawal, we will not be able to continue providing the corresponding functions.</p>
+                
+                <p><strong>7.6 Account Cancellation</strong><br>This Application does not require account registration. To clear all data, simply uninstall the app.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2>8. Minor Protection</h2>
+                <p>We attach great importance to the protection of minors' personal information.</p>
+                <p>If you are a minor under the age of 14, you should read this Privacy Policy together with your parents or other guardians and use this Application with their consent.</p>
+                <p>If you are the parent or guardian of a minor, please pay attention to whether the minor under your guardianship is using this Application with your authorization.</p>
+                <p>If you have questions about the personal information of the minor under your guardianship, please contact us.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2>9. Privacy Policy Updates</h2>
+                <p>We may revise this Privacy Policy from time to time. When the policy changes, we will notify you through in-app notifications or other prominent means.</p>
+                <p>For major changes, we will notify you before they take effect and re-obtain your consent. Major changes include but are not limited to:</p>
+                <ul>
+                    <li>Changes in the purpose or method of personal information processing</li>
+                    <li>Changes in the types of personal information collected</li>
+                    <li>Changes in third-party sharing of personal information</li>
+                    <li>Changes in your rights and how to exercise them</li>
+                </ul>
+                <p>If you do not agree with the revised Privacy Policy, you have the right to stop using this Application. If you continue to use it, you will be deemed to have accepted the revised Privacy Policy.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2>10. Dispute Resolution</h2>
+                <p>If you have any questions, comments or suggestions about this Privacy Policy or personal information protection, or wish to exercise your personal information rights, you can contact us through the following methods. We will respond to your request within 15 working days.</p>
+                <p>If you are not satisfied with our response, you may file a complaint with relevant authorities or seek a solution by filing a lawsuit with a court of competent jurisdiction.</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <h2>11. Contact Us</h2>
+                <div class="contact-card">
+                    <h3>📞 Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="icon">🏢</span>
+                        <span>Company: Huanketai Electronic Technology Co., Ltd.</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>Phone: +86 18153604323</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🌐</span>
+                        <span>Website: www.huanketai.cn</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <span>Address: No. 1294-20, Lida Pharmaceutical Park, Anning Dist., Lanzhou, Gansu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Declaration -->
+            <div class="notice success">
+                <div class="notice-title">✅ Important Declaration</div>
+                <ul style="margin-left: 20px;">
+                    <li>This Application is a completely offline tool that can use core functions without network</li>
+                    <li>All data is stored only locally on your device and will not be uploaded to any server</li>
+                    <li>We will not collect, upload or share any of your personal information</li>
+                    <li>This Application does not contain any third-party SDK</li>
+                    <li>This Application will not auto-start or launch other applications</li>
+                    <li>Your privacy and data security are completely under your control</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Huanketai Electronic Technology Co., Ltd. All Rights Reserved</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.huanketai.cn">www.huanketai.cn</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.body.classList.remove('show-zh', 'show-en');
+        document.body.classList.add('show-' + lang);
+        
+        // 更新HTML lang属性
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        
+        // 滚动到顶部
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 根据浏览器语言自动选择
+    (function() {
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang && !userLang.startsWith('zh')) {
+            switchLang('en');
+        }
+    })();
+</script>
+
+</body>
+</html>
