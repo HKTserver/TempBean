@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温豆 TempBean - 支持与帮助</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            font-size: 50px;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+        }
+        
+        .brand {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+            color: white;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 .icon {
+            font-size: 1.5em;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-item h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #666;
+        }
+        
+        .contact-info {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .contact-item .icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        
+        .contact-item a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-item .label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        
+        .contact-item .value {
+            font-weight: 500;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .feature-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-item h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .service-item .icon {
+            font-size: 1.3em;
+        }
+        
+        .service-item .text h4 {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+        
+        .service-item .text p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .language-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .language-switch button {
+            padding: 8px 20px;
+            margin: 0 5px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .language-switch button:hover,
+        .language-switch button.active {
+            background: white;
+            color: #4CAF50;
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        .footer a {
+            color: white;
+        }
+        
+        .specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .spec-tag {
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        
+        .company-intro {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .company-intro p {
+            margin-bottom: 12px;
+        }
+        
+        .company-intro p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .card {
+                padding: 20px;
+            }
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 语言切换 -->
+        <div class="language-switch">
+            <button class="active" onclick="switchLang('zh', this)">中文</button>
+            <button onclick="switchLang('en', this)">English</button>
+        </div>
+        
+        <!-- 头部 -->
+        <div class="header">
+            <div class="logo">🌡️</div>
+            <h1 id="title">温豆 TempBean</h1>
+            <p id="subtitle">专业蓝牙温度记录仪配套应用</p>
+            <span class="brand">HKT</span>
+        </div>
+        
+        <!-- 功能介绍 -->
+        <div class="card">
+            <h2><span class="icon">✨</span> <span id="features-title">主要功能</span></h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="icon">📡</div>
+                    <h4 id="f1-title">蓝牙连接</h4>
+                    <p id="f1-desc">扫描并连接HKT温度记录仪，支持按名称和信号强度筛选</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🌡️</div>
+                    <h4 id="f2-title">实时监测</h4>
+                    <p id="f2-desc">实时温度显示、趋势图表、高低温告警提醒</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">⏱️</div>
+                    <h4 id="f3-title">数据记录</h4>
+                    <p id="f3-desc">支持立即记录和定时记录，间隔可设1秒至12小时</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📥</div>
+                    <h4 id="f4-title">数据下载</h4>
+                    <p id="f4-desc">一键下载历史数据，支持GPS位置标记</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📊</div>
+                    <h4 id="f5-title">历史管理</h4>
+                    <p id="f5-desc">本地存储、搜索查看、温度曲线分析</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📤</div>
+                    <h4 id="f6-title">数据分享</h4>
+                    <p id="f6-desc">导出CSV文件，轻松分享温度记录</p>
+                </div>
+            </div>
+            <div class="specs">
+                <span class="spec-tag" id="spec1">温度范围: -55°C ~ 150°C</span>
+                <span class="spec-tag" id="spec2">记录间隔: 1秒 ~ 12小时</span>
+                <span class="spec-tag" id="spec3">存储容量: 52.5万条</span>
+            </div>
+        </div>
+        
+        <!-- 服务领域 -->
+        <div class="card">
+            <h2><span class="icon">🏭</span> <span id="service-title">服务领域</span></h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <span class="icon">🍔</span>
+                    <div class="text">
+                        <h4 id="s1-title">食品行业</h4>
+                        <p id="s1-desc">食品储存、运输温度监控</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="icon">💊</span>
+                    <div class="text">
+                        <h4 id="s2-title">医药行业</h4>
+                        <p id="s2-desc">药品、疫苗冷链监控</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="icon">📦</span>
+                    <div class="text">
+                        <h4 id="s3-title">仓储物流</h4>
+                        <p id="s3-desc">仓库环境温度监测</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🔬</span>
+                    <div class="text">
+                        <h4 id="s4-title">科研实验</h4>
+                        <p id="s4-desc">实验室环境监控</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🌱</span>
+                    <div class="text">
+                        <h4 id="s5-title">农业种植</h4>
+                        <p id="s5-desc">大棚、培育室温度管理</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🏭</span>
+                    <div class="text">
+                        <h4 id="s6-title">工业制造</h4>
+                        <p id="s6-desc">生产环境温度控制</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 常见问题 -->
+        <div class="card">
+            <h2><span class="icon">❓</span> <span id="faq-title">常见问题</span></h2>
+            
+            <div class="faq-item">
+                <h3 id="q1">Q: 为什么搜索不到设备？</h3>
+                <p id="a1">请确保：1) 手机蓝牙已开启；2) 已授予应用蓝牙和位置权限；3) 温度记录仪电量充足且处于广播状态；4) 尝试调整信号强度筛选滑块。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 id="q2">Q: 如何开始记录温度？</h3>
+                <p id="a2">连接设备后，在设备详情页点击"开始记录"按钮，可选择"立即启动"或"定时启动"模式。定时模式可设置开始和结束时间。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 id="q3">Q: 如何下载历史数据？</h3>
+                <p id="a3">进入设备详情页 → 点击"数据下载" → 可选填位置信息 → 点击"开始下载"。下载完成后可在"历史"标签页查看和分享。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 id="q4">Q: 如何设置温度告警？</h3>
+                <p id="a4">进入设备详情页 → 点击"记录配置" → 设置高温阈值和低温阈值（范围-55°C到150°C）。当温度超出范围时会显示告警提示。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 id="q5">Q: 数据会上传到服务器吗？</h3>
+                <p id="a5">不会。所有温度数据仅存储在您的设备本地，我们不会收集或上传任何用户数据。您可以随时导出CSV文件自行保管。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 id="q6">Q: 支持哪些设备？</h3>
+                <p id="a6">目前支持HKT系列蓝牙低功耗(BLE)温度记录仪。</p>
+            </div>
+        </div>
+        
+        <!-- 关于我们 -->
+        <div class="card">
+            <h2><span class="icon">🏢</span> <span id="about-title">关于我们</span></h2>
+            <div class="company-intro">
+                <p id="company-name" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 8px;">环科泰电子科技有限公司</p>
+                <p id="company-name-en" style="font-size: 13px; color: #888; margin-bottom: 16px;">Huanketai Electronic Technology Co., LTD</p>
+                <p id="intro1">我们是一家专注于定制化测量数据服务的领先企业，致力于为各行各业的客户提供精准、可靠的测量解决方案。</p>
+                <p id="intro2">我们的核心竞争力在于能够根据客户的具体需求和应用场景，提供量身定制的测量数据服务，帮助客户实现更高效、更精确的决策和运营。</p>
+            </div>
+        </div>
+        
+        <!-- 联系我们 -->
+        <div class="card">
+            <h2><span class="icon">📬</span> <span id="contact-title">联系我们</span></h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <div class="label" id="phone-label">客服电话</div>
+                        <div class="value"><a href="tel:18153604323">18153604323</a></div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🌐</span>
+                    <div>
+                        <div class="label" id="web-label">官方网站</div>
+                        <div class="value"><a href="https://www.huanketai.cn" target="_blank">www.huanketai.cn</a></div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <div class="label" id="addr-label">公司地址</div>
+                        <div class="value" id="address">甘肃省兰州市安宁区立达医药产业园1294附20号</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <p id="copyright">© 2025 环科泰电子科技有限公司 版权所有</p>
+            <p>
+                <a href="index.html" id="privacy-link">隐私政策</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        const translations = {
+            zh: {
+                title: "温豆 TempBean",
+                subtitle: "专业蓝牙温度记录仪配套应用",
+                "features-title": "主要功能",
+                "f1-title": "蓝牙连接",
+                "f1-desc": "扫描并连接HKT温度记录仪，支持按名称和信号强度筛选",
+                "f2-title": "实时监测",
+                "f2-desc": "实时温度显示、趋势图表、高低温告警提醒",
+                "f3-title": "数据记录",
+                "f3-desc": "支持立即记录和定时记录，间隔可设1秒至12小时",
+                "f4-title": "数据下载",
+                "f4-desc": "一键下载历史数据，支持GPS位置标记",
+                "f5-title": "历史管理",
+                "f5-desc": "本地存储、搜索查看、温度曲线分析",
+                "f6-title": "数据分享",
+                "f6-desc": "导出CSV文件，轻松分享温度记录",
+                "spec1": "温度范围: -55°C ~ 150°C",
+                "spec2": "记录间隔: 1秒 ~ 12小时",
+                "spec3": "存储容量: 52.5万条",
+                "service-title": "服务领域",
+                "s1-title": "食品行业",
+                "s1-desc": "食品储存、运输温度监控",
+                "s2-title": "医药行业",
+                "s2-desc": "药品、疫苗冷链监控",
+                "s3-title": "仓储物流",
+                "s3-desc": "仓库环境温度监测",
+                "s4-title": "科研实验",
+                "s4-desc": "实验室环境监控",
+                "s5-title": "农业种植",
+                "s5-desc": "大棚、培育室温度管理",
+                "s6-title": "工业制造",
+                "s6-desc": "生产环境温度控制",
+                "faq-title": "常见问题",
+                "q1": "Q: 为什么搜索不到设备？",
+                "a1": "请确保：1) 手机蓝牙已开启；2) 已授予应用蓝牙和位置权限；3) 温度记录仪电量充足且处于广播状态；4) 尝试调整信号强度筛选滑块。",
+                "q2": "Q: 如何开始记录温度？",
+                "a2": "连接设备后，在设备详情页点击「开始记录」按钮，可选择「立即启动」或「定时启动」模式。定时模式可设置开始和结束时间。",
+                "q3": "Q: 如何下载历史数据？",
+                "a3": "进入设备详情页 → 点击「数据下载」 → 可选填位置信息 → 点击「开始下载」。下载完成后可在「历史」标签页查看和分享。",
+                "q4": "Q: 如何设置温度告警？",
+                "a4": "进入设备详情页 → 点击「记录配置」 → 设置高温阈值和低温阈值（范围-55°C到150°C）。当温度超出范围时会显示告警提示。",
+                "q5": "Q: 数据会上传到服务器吗？",
+                "a5": "不会。所有温度数据仅存储在您的设备本地，我们不会收集或上传任何用户数据。您可以随时导出CSV文件自行保管。",
+                "q6": "Q: 支持哪些设备？",
+                "a6": "目前支持HKT系列蓝牙低功耗(BLE)温度记录仪。",
+                "about-title": "关于我们",
+                "company-name": "环科泰电子科技有限公司",
+                "company-name-en": "Huanketai Electronic Technology Co., LTD",
+                "intro1": "我们是一家专注于定制化测量数据服务的领先企业，致力于为各行各业的客户提供精准、可靠的测量解决方案。",
+                "intro2": "我们的核心竞争力在于能够根据客户的具体需求和应用场景，提供量身定制的测量数据服务，帮助客户实现更高效、更精确的决策和运营。",
+                "contact-title": "联系我们",
+                "phone-label": "客服电话",
+                "web-label": "官方网站",
+                "addr-label": "公司地址",
+                "address": "甘肃省兰州市安宁区立达医药产业园1294附20号",
+                "copyright": "© 2025 环科泰电子科技有限公司 版权所有",
+                "privacy-link": "隐私政策"
+            },
+            en: {
+                title: "TempBean",
+                subtitle: "Professional Bluetooth Temperature Logger App",
+                "features-title": "Features",
+                "f1-title": "Bluetooth Connection",
+                "f1-desc": "Scan and connect HKT temperature loggers, filter by name and signal strength",
+                "f2-title": "Real-time Monitoring",
+                "f2-desc": "Live temperature display, trend charts, high/low temperature alerts",
+                "f3-title": "Data Logging",
+                "f3-desc": "Immediate or scheduled recording, intervals from 1 second to 12 hours",
+                "f4-title": "Data Download",
+                "f4-desc": "One-click download of history data with GPS location tagging",
+                "f5-title": "History Management",
+                "f5-desc": "Local storage, search, temperature curve analysis",
+                "f6-title": "Data Sharing",
+                "f6-desc": "Export CSV files to easily share temperature records",
+                "spec1": "Temperature Range: -55°C ~ 150°C",
+                "spec2": "Log Interval: 1 sec ~ 12 hours",
+                "spec3": "Storage: 525,000 records",
+                "service-title": "Service Areas",
+                "s1-title": "Food Industry",
+                "s1-desc": "Food storage and transportation temperature monitoring",
+                "s2-title": "Pharmaceutical",
+                "s2-desc": "Medicine and vaccine cold chain monitoring",
+                "s3-title": "Warehousing & Logistics",
+                "s3-desc": "Warehouse environment temperature monitoring",
+                "s4-title": "Scientific Research",
+                "s4-desc": "Laboratory environment monitoring",
+                "s5-title": "Agriculture",
+                "s5-desc": "Greenhouse and cultivation room temperature management",
+                "s6-title": "Industrial Manufacturing",
+                "s6-desc": "Production environment temperature control",
+                "faq-title": "FAQ",
+                "q1": "Q: Why can't I find my device?",
+                "a1": "Please ensure: 1) Bluetooth is enabled; 2) App has Bluetooth and Location permissions; 3) Logger has sufficient battery and is broadcasting; 4) Try adjusting the signal strength filter.",
+                "q2": "Q: How to start recording temperature?",
+                "a2": "After connecting, tap 'Start Record' on the device detail page. Choose 'Immediate Start' or 'Scheduled Start' mode. Scheduled mode allows setting start and end times.",
+                "q3": "Q: How to download history data?",
+                "a3": "Go to Device Details → tap 'Data Download' → optionally enter location → tap 'Start Download'. View and share downloaded data in the 'History' tab.",
+                "q4": "Q: How to set temperature alerts?",
+                "a4": "Go to Device Details → tap 'Record Config' → set high and low temperature thresholds (range: -55°C to 150°C). Alerts will show when temperature exceeds the range.",
+                "q5": "Q: Is my data uploaded to servers?",
+                "a5": "No. All temperature data is stored locally on your device. We do not collect or upload any user data. You can export CSV files for your own records at any time.",
+                "q6": "Q: Which devices are supported?",
+                "a6": "Currently supports HKT series Bluetooth Low Energy (BLE) temperature loggers.",
+                "about-title": "About Us",
+                "company-name": "Huanketai Electronic Technology Co., LTD",
+                "company-name-en": "",
+                "intro1": "We are a leading enterprise specializing in customized measurement data services, committed to providing accurate and reliable measurement solutions for customers across various industries.",
+                "intro2": "Our core competitiveness lies in our ability to provide customized measurement data services according to customers' specific needs and application scenarios, helping customers achieve more efficient and accurate decision-making and operations.",
+                "contact-title": "Contact Us",
+                "phone-label": "Phone",
+                "web-label": "Website",
+                "addr-label": "Address",
+                "address": "No. 1294, Annex 20, Lida Pharmaceutical Industrial Park, Anning District, Lanzhou City, Gansu Province, China",
+                "copyright": "© 2025 Huanketai Electronic Technology Co., LTD. All Rights Reserved.",
+                "privacy-link": "Privacy Policy"
+            }
+        };
+        
+        function switchLang(lang, btn) {
+            // 更新按钮状态
+            document.querySelectorAll('.language-switch button').forEach(b => {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            
+            // 更新所有文本
+            const texts = translations[lang];
+            for (const [id, text] of Object.entries(texts)) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.textContent = text;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
